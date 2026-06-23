@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>rasca!</title>
+</head>
+<body>
+    <!-- Nubes de algodón de azúcar flotantes - Lado izquierdo -->
+    <svg class="cloud-fixed cloud-bottom-left" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#a8d5ff"/>
+    </svg>
+    <svg class="cloud-fixed cloud-bottom-left" style="left: 80px; bottom: 40px;" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#b8deff"/>
+    </svg>
+    <svg class="cloud-fixed cloud-bottom-left" style="left: 150px; bottom: 10px;" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#a0cfff"/>
+    </svg>
+    
+    <!-- Nubes de algodón de azúcar flotantes - Lado derecho -->
+    <svg class="cloud-fixed cloud-bottom-right" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#9ecbf0"/>
+    </svg>
+    <svg class="cloud-fixed cloud-bottom-right" style="right: 120px; bottom: 100px;" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#aed7ff"/>
+    </svg>
+    <svg class="cloud-fixed cloud-bottom-right" style="right: 20px; bottom: 30px;" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#96c7eb"/>
+    </svg>
+    
+    <header class="main-header text-center effect-header">
+        <canvas class="header-effect-canvas" aria-hidden="true"></canvas>
+        <div class="header-content">
+            <h1>Feliz 19 de junio mi amor ❤️</h1>
+        </div>
+    </header>
+    <main>
+        <!-- Sección 1: Bienvenida y botón -->
+        <div id="welcomeSection" class="container my-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8 p-4 rounded-4 shadow-sm card-boleto">
+                    <h2 class="section-title">¡Bienvenida a tu juego de cumple mes! 🎀</h2>
+                    <p class="mt-3 fs-5 text-muted card-text">
+                        Hoy tienes una dinámica especial. Abajo verás 3 boletos cargados de sorpresas.
+                        Solo puedes escoger <strong>1 boleto por dia</strong>, ¡así que piensa bien cuál elegir!
+                    </p>
+                    <p class="fs-6 text-muted card-text">
+                        Una vez que descubras tu premio, los demás boletos se bloquearán. ¡Mucha suerte, mi amor!
+                    </p>
+                    <button class="btn mt-3 px-4 py-2 rounded-pill text-white fw-bold btn-boleto" id="startBtn">
+                        Ver mis boletos ✨
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Selección de cupones -->
+        <div id="cuponsSection" class="overlay">
+            <div class="overlay-content">
+                <h2 class="section-title mb-4">Selecciona tu cupón 🎁</h2>
+                <div class="cupons-grid">
+                    <div class="cupon-card" data-cupon="hellokittycupon2">
+                        <img src="assets/images/hellokittycupon2.png" alt="Hello Kitty">
+                    </div>
+                    <div class="cupon-card" data-cupon="LTScupon2">
+                        <img src="assets/images/LTScupon2.png" alt="Little Twin Stars">
+                    </div>
+                    <div class="cupon-card" data-cupon="rilakkumacupon2">
+                        <img src="assets/images/rilakkumacupon2.png" alt="Rilakkuma">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Rasca y gana -->
+        <div id="scratchSection" class="overlay">
+            <div class="overlay-content scratchgame-container">
+                <h2 class="section-title mb-4">¡Rasca para revelar! ✨</h2>
+                <div class="scratch-wrapper"></div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Resultado -->
+        <div id="resultSection" class="overlay">
+            <div class="overlay-content result-container">
+                <div class="result-strip">
+                    <h2 class="section-title">🎉 ¡Ganaste! 🎉</h2>
+                    <p id="prizeText" class="prize-text"></p>
+                    <button class="btn mt-3 px-4 py-2 rounded-pill text-white fw-bold btn-boleto" id="restartBtn">
+                        Jugar de nuevo ❤️
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
