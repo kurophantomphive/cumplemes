@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>rasca!</title>
 </head>
 <body>
-    <!-- Nubes de algodón de azúcar flotantes - Lado izquierdo -->
     <svg class="cloud-fixed cloud-bottom-left" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
         <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#a8d5ff"/>
     </svg>
@@ -19,7 +18,6 @@
         <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#a0cfff"/>
     </svg>
     
-    <!-- Nubes de algodón de azúcar flotantes - Lado derecho -->
     <svg class="cloud-fixed cloud-bottom-right" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
         <path d="M 30 10 Q 20 5, 15 15 Q 5 20, 10 30 Q 20 40, 35 35 Q 50 38, 55 28 Q 65 25, 60 15 Q 55 5, 40 8 Q 35 2, 30 10" fill="#9ecbf0"/>
     </svg>
@@ -37,7 +35,6 @@
         </div>
     </header>
     <main>
-        <!-- Sección 1: Bienvenida y botón -->
         <div id="welcomeSection" class="container my-5 text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8 p-4 rounded-4 shadow-sm card-boleto">
@@ -56,25 +53,23 @@
             </div>
         </div>
 
-        <!-- Sección 2: Selección de cupones -->
         <div id="cuponsSection" class="overlay">
             <div class="overlay-content">
                 <h2 class="section-title mb-4">Selecciona tu cupón 🎁</h2>
                 <div class="cupons-grid">
                     <div class="cupon-card" data-cupon="hellokittycupon2">
-                        <img src="assets/images/hellokittycupon2.png" alt="Hello Kitty">
+                        <img src="hellokittycupon2.png" alt="Hello Kitty">
                     </div>
                     <div class="cupon-card" data-cupon="LTScupon2">
-                        <img src="assets/images/LTScupon2.png" alt="Little Twin Stars">
+                        <img src="LTScupon2.png" alt="Little Twin Stars">
                     </div>
                     <div class="cupon-card" data-cupon="rilakkumacupon2">
-                        <img src="assets/images/rilakkumacupon2.png" alt="Rilakkuma">
+                        <img src="rilakkumacupon2.png" alt="Rilakkuma">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sección 3: Rasca y gana -->
         <div id="scratchSection" class="overlay">
             <div class="overlay-content scratchgame-container">
                 <h2 class="section-title mb-4">¡Rasca para revelar! ✨</h2>
@@ -82,7 +77,6 @@
             </div>
         </div>
 
-        <!-- Sección 4: Resultado -->
         <div id="resultSection" class="overlay">
             <div class="overlay-content result-container">
                 <div class="result-strip">
@@ -99,6 +93,6 @@
 
     </footer>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
