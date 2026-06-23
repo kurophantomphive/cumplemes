@@ -164,9 +164,11 @@
 
 		const prize = cuponesPrizes[cuponName];
 		const wrapper = document.querySelector('.scratch-wrapper');
+        
+		// Modificado: Ahora busca la imagen directamente en la raíz (sin assets/images/)
 		wrapper.innerHTML = `
 			<div class="selected-cupon-preview">
-				<img src="assets/images/${cuponName}.png" alt="Cupón seleccionado" class="selected-cupon-image">
+				<img src="${cuponName}.png" alt="Cupón seleccionado" class="selected-cupon-image">
 			</div>
 			<div class="scratch-card">
 				<div class="prize-background">${prize}</div>
@@ -296,4 +298,3 @@
 	});
 
 })();
-
